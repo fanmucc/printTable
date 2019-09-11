@@ -1,0 +1,2316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>打印样式</title>
+    <link rel="stylesheet" href="./css/mifeng_printcss.css">
+    <style>
+        .divButton {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 10px;
+        }
+
+        #printButton {
+            border: 1px solid;
+            border-radius: 5px;
+            padding: 5px 10px;
+            outline: none;
+            /*取消点击时出现的蓝色边框*/
+        }
+
+        #printButton:hover {
+            background: #f2e4e4;
+            color: #fff;
+        }
+
+        #printButton:active {
+            background: #ccc;
+            color: #fff;
+        }
+
+        /* 当使用的时printThis.js 文件时无法抓去到css文件下的样式，所以在当页的css文件中写出*/
+        @media print {
+            .table {
+                border-collapse: collapse !important
+            }
+
+            .table td, .table th {
+                background-color: #fff !important
+            }
+
+            .table-bordered td, .table-bordered th {
+                border: 1px solid #ddd !important
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>样式打印</header>
+    <main>
+        <section>
+            <article>
+                <div class="divButton">
+                    <button id="printButton">表格打印</button>
+                </div>
+                <div class="table-responsive" id="table">
+                    <table class="table table-striped table-bordered table-hover" style="width: 100%">
+                        <thead class="thead">
+                            <td class="sorting text-center">序号</td>
+                            <td class="sorting text-center">款号</td>
+                            <td class="sorting text-center">类别</td>
+                            <td class="sorting text-center">颜色</td>
+                            <td class="sorting text-center">季节</td>
+                            <td class="sorting text-center">单价</td>
+                            <td class="sorting text-center">件数</td>
+                            <td class="sorting text-center">件数</td>
+                            <td class="sorting text-center">吊牌金额</td>
+                            <td class="sorting text-center">折后金额</td>
+                        </thead>
+                        <tbody class="tbody">
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                            <tr class="ng-cloak tbodyTr">
+                                <td class="a">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="season">
+                                    1
+                                </td>
+                                <td class="goodsPrice">
+                                    ￥1
+                                </td>
+                                <td class="tr">
+                                    1
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td class="tagPrice">
+                                    ￥1
+                                </td>
+                                <td class="discountPrice">
+                                    ￥1
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script src="./js/printThis.js"></script>
+<script src="./js/mifeng.js"></script>
+<script>
+    $('#printButton').on('click', function () {
+        console.log('11')
+        $("#table").jqprint({
+            debug: false,
+            importCSS: true,
+            printContainer: true,
+            operaSupport: false
+        });
+
+
+
+        // $("#table").printThis({
+        //     debug: false,
+        //     importCSS: true,        // 导入父级css
+        //     importStyle: true,
+        //     printContainer: true,
+        //     operaSupport: false
+        // })
+    })
+</script>
+
+</html>
